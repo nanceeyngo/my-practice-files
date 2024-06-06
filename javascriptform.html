@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function myvalidator() {
+        let x = document.forms["newform"]["name"].value;
+        let country = document.forms["newform"]["country"].value;
+        if (x == "") {
+            alert("Name must be filled out");
+            return false;
+        } 
+        if (country =="") {
+            alert("Country must be filled out");
+            return false;
+        }
+    }
+</script>
+<body>
+    <form name="newform" action="http://aa.mccrew.com/cgi-bin/reflect.cgi" 
+    onsubmit="return myvalidator()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name"><br><br>
+        <label for="country">Country:</label>
+        <input type="text" name="country"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

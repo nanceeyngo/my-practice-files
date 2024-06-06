@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arr = [10, 38, 27, 15,70, 50, 28, 68, 37 ]
+
+    function showlength() {
+        let one = arr.length;
+        document.getElementById("demo").innerHTML = one;
+        // alert('The length of the array is ' + one);
+    }
+    function as_string() {
+        let two = arr.toString();
+        alert(two);
+    }
+    function my_join() {
+        let three = arr.join(" * ")
+        alert(three);
+    }
+    function my_compare(a, b) {
+        alert(a < b);
+    }
+    function sort_asc() {
+        let four = arr.sort();
+        alert(four);
+        
+    }
+    function sort_desc() {
+        let five = arr.reverse();
+        alert(five);
+    }
+</script>
+<body>
+    <p>Array Exercises</p>
+    <p id="demo"></p>
+
+    <p><button type="button" onclick="showlength()">Array length</button></p>
+    <p><button type="button" onclick="as_string()">To String</button> </p>
+    <p><button type="button" onclick="my_join()">Join</button> </p>
+    <!-- <p><button type="button" onclick="console.log(arr.sort())">Sort Ascending</button> </p> -->
+    <p><button type="button" onclick="sort_asc()">Sort Ascending</button></p>
+    <p><button type="button" onclick="sort_desc()">Sort Descending</button> </p>
+    <p><button type="button" onclick="my_compare([3], [4])">Comparison</button></p>
+</body>
+</html>

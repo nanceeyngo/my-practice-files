@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="para1">Exercise 1 - Write name to console</p>
+    <p><button type="button" onclick="console.log('My name is Ngozi')">Write to console</button></p>
+
+    <p id="demo2">JavaScript can change elements</p>
+    <p id="demo"></p>
+
+    <script>
+        let a = 100;
+        let b = 50;
+        let x = a + b;
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <button type="button" 
+    onclick='document.getElementById("demo2").innerHTML = "Go!"'>Click Me!</button>
+    
+    <h2>What else can JavaScript do?</h2>
+    <p id="demo3">JavaScript can change the style of an HTML content</p>
+
+    <button type="button"
+    onclick='document.getElementById("demo3").style.fontSize ="40px"'>Click Me!</button>
+
+</body>
+</html>

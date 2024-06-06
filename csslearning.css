@@ -1,0 +1,30 @@
+h1{
+    background-color: purple;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: brown;
+    align-items: center;
+    gap: 30px;    
+}
+img{
+    height: 200px;
+    width: 300px;
+}
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: yellow;
+    align-items: center;
+    gap: 30px;    
+}
+.container3{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: green;
+    align-items: center;
+    gap: 30px;    
+}

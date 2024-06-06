@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="asynctrial()">Async Get Call</button><br><br><br>
+
+</body>
+
+<script>
+
+function asynctrial() {
+        fetch('https://dummyjson.com/product/')
+        .then(response => response.json())
+        .then(myObjects => {
+            console.log(myObjects);
+        })
+        .catch(error => {
+            console.error("An error occured;" , error);
+})
+}
+</script>

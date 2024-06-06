@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Learning the DOM</title>
+</head>
+<body>
+    
+
+
+
+
+   <h1>Document Object Model 1</h1>
+   <h1>Document Object Model 2</h1>
+
+   <p>This is the paragraph tag</p>
+   <h2>Types of paragraphs</h2>
+   
+   <!-- <a id="nav" href="dompractice.html">Home</a> -->
+   <ul>
+    <li>head</li>
+    <li>neck</li>
+    <li>feet</li>
+    </ul>
+    <input type="text" id="inp" value="africa agility"/>
+</body>
+   
+    
+
+
+    <!-- <label for="fname">First name</label>
+    <input type="text" id="fname" class="ipt-fame"/>
+    
+    <label for="lname">Last name</label>
+    <input type="text" id="lname" class="ipt-lname"/>
+    
+    <label for="adrs">Address</label>
+    <input type="text" id="adrs" class="ipt-adrs"/>
+
+    <label for="rsd">Residence</label>
+    <input type="text" id="rsd" class="ipt-rsd"/> -->
+
+
+<script>
+
+    const headernode = document.getElementsByTagName('html');
+    cosnole.log(headernode);
+
+    var bodynode = document.getElementsByTagName('body');
+    
+    console.log("Parent of Body Tag " + bodynode[0].parentNode);
+    console.log("Children of Body Tag " + bodynode[0].childNodes);
+
+    var sibln = document.getElementsByTagName('h1');
+    console.log(sibln[0].nextSibling);
+
+
+
+    
+
+// for the h, p and ul tags 
+
+    // const test1 = document.getElementsByTagName('h1');
+    // const test2 = document.getElementsByTagName('p')[0];
+    // const test3 = document.getElementsByTagName('ul')[0];
+    //     alert(test1[1].innerText);
+    
+    // var inputvalue = document.getElementById('inp');
+    //     alert(inputvalue.value);
+
+
+
+// for the labels - using different selectors
+
+    // var namevalue = document.getElementById('fname').value;
+    // console.log(namevalue);
+
+    // var nameevalue = document.getElementsByClassName('ipt-lname')[0].value;
+    // console.log(nameevalue);
+
+    // var nameeevalue = document.getElementsByTagName('input')[2].value;
+    // console.log(nameeevalue);
+
+</script>
+</html>

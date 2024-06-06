@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>MY FORM</title>
+   </head>
+   <body>
+<form action="http://aa.mccrew.com/cgi-bin/reflect.cgi" method="POST">
+    
+    <h1>Welcome to Big Company</h1>
+    <h3>Contact us</h3>
+    <label for="source">How did you hear about us?</label><br><br>
+    <input type="radio" name="source" id="internet" value="internet">
+    <label for="internet">Internet</label>
+    <input type="radio" name="source" id="radio" value="radio">
+    <label for="radio">Radio</label>
+    <input type="radio" name="source" id="television" value="television">
+    <label for="television">Television</label><br><br>
+
+    <label for="have">I have a:</label>
+    <select name="have" id="have">
+        <option>Select an option</option>
+        <option value="billingquestion">Billing Question</option>
+        <option value="techsupportissue">Tech Support Issue</option>
+        <option value="otherissue">Other Issue</option>
+    </select><br><br>
+
+    <label for="message">Please drop a message</label><br>
+    <textarea name="message" id="message" cols="30" rows="7"></textarea><br><br>
+    <label for="email">My email is</label>
+    <input type="text" name="email"><br><br>
+    <input type="submit" value="Contact us">
+    
+
+</form>
+</body>

@@ -1,0 +1,49 @@
+.image-container{
+    display: flex;
+    gap: 10px;
+    background-color: brown;
+    
+}
+img{
+    width: 100%;
+    /* width: 250px; */
+}
+.image-container div{
+    flex-basis: 31%;
+    /* flex-basis: 100px; */
+    background-color: black;
+}
+p{
+    color: red;
+    font font-weight: 500px;
+}
+@media screen and (max-width: 767px) {
+    .image-container{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        
+    }
+    .image-container div{
+        flex-basis: 50%;
+    }
+    
+    p{
+        color: green;
+    }
+}
+@media screen and (max-width: 480px) {
+    .image-container{
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        
+     }
+    .image-container div{
+        flex-basis: 100%;
+    }
+    img{
+        width: 250px;
+    }
+    p{
+        color: green;
+    }
+}

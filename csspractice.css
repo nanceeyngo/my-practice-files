@@ -1,0 +1,34 @@
+/*class name used here */
+.onebutton{
+    background-color: blue;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+/* id name used here */
+#firstbutton{
+    background-color: brown;
+    padding: 10px;
+    border: 5px dashed green;
+    border-radius: 15px;
+}
+.twobutton{
+    background-color: black;
+    padding: 20px;
+    border: 5px solid green;
+    border-radius: 15px;
+}
+#secondbutton{
+    background-color: yellow;
+    padding: 10px;
+    border: 5px dashed green;
+    border-radius: 15px;
+}
+/* tag name used here */
+button{
+    background-color: orangered;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 12px;
+}
+

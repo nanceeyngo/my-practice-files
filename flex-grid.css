@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    background-color: green;
+    width: 200px;
+}
+.container-flex{
+    display: flex;
+    background-color: yellow;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: black;
+    width: 300px;
+    height: 70px;
+    padding: 10px;
+    color: white;
+    border-radius: 15px;
+    border: 3px solid brown;  
+}
+.container-grid{
+    display: grid;
+    background-color: blue;
+    border: 2px solid green;
+    grid-template-columns: repeat(3, 1fr);  
+    gap:20px;    
+}
+.boxes{
+    background-color: gold;
+    height: 70px;
+    width: 300px;
+    border: 3px solid red;
+    border-radius: 15px;
+    
+}

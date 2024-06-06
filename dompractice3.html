@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Learning the DOM</title>
+</head>
+<body>
+
+
+   <h1>Document Object Model 1</h1>
+   <h1>Document Object Model 2</h1>
+
+   <p>This is the paragraph tag</p>
+   <h2>Types of paragraphs</h2>
+   
+  
+   <ul>
+    <li>head</li>
+    <li>neck</li>
+    <li>feet</li>
+    </ul>
+
+</body>
+   
+
+<script>
+
+    const headernode = document.getElementsByTagName('html');
+    cosnole.log(headernode);
+
+    var bodynode = document.getElementsByTagName('body')[0];
+    
+    console.log("Parent of Body Tag " + bodynode.parentNode);
+    console.log("Children of Body Tag " + bodynode.childNodes);
+
+
+</script>
+</html>

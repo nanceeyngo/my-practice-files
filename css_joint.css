@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:auto;
+    align-items: center;
+    /* background-color: yellow; */
+    /* position: fixed; */
+}
+nav{
+    /* background-color: brown; */
+    padding: 25px 50px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    /* background-color: blue; */
+    padding: 8px;
+    gap: 18px;
+    /* justify-content: space-between; */
+    /* width: 300px */
+}
+button{
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    padding: 7px;
+    width: 100px;
+    color: white;
+}
+h1{
+    font-size: 35px;
+    font-weight: 600;
+}

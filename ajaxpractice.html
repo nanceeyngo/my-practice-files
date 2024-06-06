@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="asynctrial()">Async Get Call</button><br><br><br>
+
+
+    
+        <input type="text" id="pname" name="productName" value="Product 1">
+        <input type="text" id="pcost" name="productcost" value="100">
+        <input type="text" id="pbrand" name="productbrand" value="Gold">
+        <input type="text" id="ptitle" name="producttitle" value="Apple Mobile"><br><br>
+        <input type="text" id="psmtn" name="productsmtn" value="phone">
+        <input type="text" class="added" value="Next line"/>
+        <input type="text" id="added2" value="Second next line"/> <br><br><br>
+        <button id="formbutton" name="productbutton" onclick="changingtitles()">Title Change Button</button><br><br><br>
+
+        <table border="1">
+
+                <tr>
+                    <th></th>
+                    <th id="ch1">Column Header 1</th>
+                    <th id="ch2">Column Header 2</th>
+                    <th id="ch3">Column Header 3</th>
+                </tr>
+
+                <tr>
+                    <th id="rh1">Row Header 1</th>
+                    <td id="c1">Cell 1</td>
+                    <td id="c2">Cell 2</td>
+                    <td id="c3" class="c33">Cell 3</td>
+                </tr>
+
+                <tr>
+                    <th id="rh2">Row Header 2</th>
+                    <td id="c4">Cell 4</td>
+                    <td id="c5">Cell 5</td>
+                    <td id="c6">Cell 6</td>
+                </tr>
+
+                <tr>
+                    <th id="rh3">Row Header 3</th>
+                    <td id="c7">Cell 7</td>
+                    <td id="c8">Cell 8</td>
+                    <td id="c9">Cell 9</td>
+                </tr>
+
+          
+        </table>
+
+
+    
+</body>
+<script>
+    function asynctrial() {
+        fetch('https://dummyjson.com/products.2')
+        .then(res => res.json())
+        .then(json => {
+            console.log(json);
+        })
+
+        .catch(error => {
+            console.error("An error occured;" , error);
+            alert("Sorry you do not have access to this page");
+
+            fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(json => {
+            console.log(json)
+       
+        })
+    })
+
+    }
+
+   
+async function changingtitles() {
+
+    var titleofproduct = document.getElementById('ptitle');
+    var priceofproduct = document.querySelector('#pcost');
+    var nameofproduct = document.getElementsByTagName('input')[0];
+    var brandofproduct = document.getElementsByTagName('input');
+    var somethingpd = document.getElementById('psmtn');
+    var adding = document.querySelector('.added');
+    var adding2 = document.querySelectorAll('input')[6];
+    
+    var fchd = document.getElementById('ch1');
+    var schd = document.getElementById('ch2');
+    var tchd = document.getElementsByTagName('th')[3];
+    var frhd = document.getElementById('rh1');
+    var srhd = document.querySelector('th#rh2');
+    var trhd = document.getElementsByTagName('th')[6];
+    var fc = document.querySelectorAll('td');
+    var sc = document.getElementsByTagName('td')[1];
+    var tc = document.querySelector('.c33');
+    var frc = document.getElementById('c4');
+    var ffc = document.querySelector('#c5');
+    var sxc = document.getElementById('c6');
+    var svc = document.getElementsByTagName('td')[6];
+    var ec = document.querySelector('#c8');
+    var nc = document.getElementById ('c9');
+
+    
+    await fetch('https://dummyjson.com/products')
+    .then(response => response.json())
+    .then(json => {
+        
+        console.log(json.products[0].title)
+        titleofproduct.value = json.products[0].title;
+        priceofproduct.value = json.products[0].price;
+        nameofproduct.value = json.products[0].description;
+        brandofproduct[2].value = json.products[0].category; 
+        somethingpd.value = json.products[0].images[2];
+        adding.value = json.products[0].stock;
+        adding2.value = json.products[0].rating;
+        
+        fchd.innerText = json.products[1].title;
+        schd.innerText = json.products[2].title;
+        tchd.innerText = json.products[3].title;
+        frhd.innerText = json.products[1].brand;
+        srhd.innerText = json.products[2].brand;
+        trhd.innerText = json.products[3].brand;
+        fc[0].innerText = json.products[1].price;
+        sc.innerText = json.products[1].rating;
+        tc.innerText = json.products[1].discountPercentage;
+        frc.innerText = json.products[2].price;
+        ffc.innerText = json.products[2].rating;
+        sxc.innerText = json.products[2].discountPercentage;
+        svc.innerText = json.products[3].price;
+        ec.innerText = json.products[3].rating;
+        nc.innerText = json.products[3].discountPercentage;
+      
+
+    
+    })
+// Questions: I tried to use get elements by name, class name, it didn't work
+}
+
+
+
+
+    // function handleError(err); {
+    // console.log("Sorry you do not have access to this page");
+    // console.log(err);
+
+    // }
+
+    // const endpoint ="https://dummyjson.com/products";
+    // const mypromise = fetch(endpoint);
+
+    // mypromise
+    // .then((data) => {
+    //     console.log(data)
+    // })
+    // .catch(hanldeError);
+
+</script>
+</html>

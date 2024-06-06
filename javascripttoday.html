@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<p id="me"></p>
+    <script>
+let m = 0;
+for (let m = 0; m < 10; m++) {
+    console.log(m);
+}
+// document.getElementById("txt").innerHTML = m;
+const cars = ["Toyota", "Peugeot","BMW", "Honda", "Ford"];
+let n, len, text;
+for (n = 0, len = cars.length, text = ""; n < len; n++) {
+    text+= cars[n] + "<br>";
+
+}
+document.getElementById("me").innerHTML = text;
+// Other Alternatives to loop
+// let n = 0;
+// let len = cars.length;
+// let text = "";
+// for (; n < len; n++) {
+//     text += cars[n] + "<br>";
+// }
+// let n = 0;
+// let len = cars.length;
+// let text = "";
+// for (; n < len; ) {
+//     text+= cars[n] + "<br>"; n++;
+// }
+// for (item in cars) {
+    // console.log("index" .concat(item, "has the value ", cars[item]));
+
+
+const person = {fname: "Ngozi", lname:1234};
+let object = "";
+for(let fname in person) {
+    object += person[fname] + " ";
+   
+}
+
+// document.getElementById("txt").innerHTML = object;
+
+
+console.log(object);
+
+</script>
+
+
+
+
+    
+</body>
+</html>
